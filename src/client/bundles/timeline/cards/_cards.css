@@ -1,0 +1,48 @@
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row > div {
+  margin: 5px 0px;
+}
+.row:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.caseDetailRow:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.itemName {
+  width: 70%;
+}
+
+.cardBody {
+  min-height: 292px;
+  max-width: 400px;
+}
+
+.cardContainer {
+  margin-top: 30px;
+}
+
+:global .ant-card {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-color: transparent;
+  color: white;
+  border-radius: 5px;
+}
+
+.banner {
+  height: 50px;
+  line-height: 50px;
+  margin: auto;
+  text-align: center;
+  color: white;
+  font-weight: 400;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  margin-bottom: 20px;
+}

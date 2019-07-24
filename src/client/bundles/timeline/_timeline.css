@@ -1,0 +1,268 @@
+:root {
+  --icon-unit: 50px;
+  --color-red: #fa8e62;
+  --color-blue: #51d2f3;
+  --color-violet: #9999cc;
+  --color-green: #53e994;
+  --color-bg-gray: #f8f9fa;
+}
+
+.wrapperDiv {
+  /* position: absolute; */
+}
+.timeline {
+  & .timeline-chart {
+    /* background: #f4f5f6; */
+  }
+}
+.topImg{
+  width: 100px;
+  height: 100px;
+  float:right;
+  margin-right: 10px;
+  border-radius: 50px;
+  background: white;
+  background-image: url(../../../../assets/images/timelineCircle.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.inputLabel {
+  /* width: 120px; */
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+.dropbox{
+  display: inline-block;
+  margin-left: 20px;
+}
+.detailsDiv {
+  width: 70%;
+  color: white;
+  min-height: 500px;
+  opacity: 30%;
+  display: flex;
+  & .placeHolder {
+    align-items: center;
+    justify-content: center;
+  }
+}
+.timelineComponent {
+  height: 390px;
+  width: 1500px;
+  padding: 20px 40px;
+  /* height: 360px; */
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-color: rgba(0, 0, 0, 0.4); /* darkslategray;*/
+  /* border: 1px solid #d5dae0; */
+  border-radius: 5px;
+  margin-top: 20px;
+  & .dummyDiv {
+    height: 50px;
+    width: auto;
+  }
+}
+.timelineItem {
+  position: relative;
+  width: calc(var(--icon-unit) + var(--icon-unit) + 9px);
+  height: calc(var(--icon-unit) + var(--icon-unit) + var(--icon-unit));
+  display: inline-block;
+  bottom: 15px;
+  &.timeline-bottom {
+    top: 35px;
+    & .contentDiv {
+      top: 0;
+    }
+  }
+  &.zIndexClass15 {
+    z-index: 15;
+  }
+  &.zIndexClass14 {
+    z-index: 14;
+  }
+  &.zIndexClass14 {
+    z-index: 13;
+  }
+  & .childDiv {
+    max-width: calc(var(--icon-unit) + var(--icon-unit));
+    position: relative;
+    left: 40px;
+    top: calc(0px - ((var(--icon-unit) / 2) + 10px + 5px));
+    /* border: grey 1px solid; */
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    /* max-height: calc(var(--icon-unit) + var(--icon-unit) / 2); */
+    height: calc(var(--icon-unit) + var(--icon-unit) / 2);
+    /* Dark backgound */
+    color: white;
+    font-weight: 500px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    z-index: 10;
+    /* white-space: nowrap; */
+    & .contentDiv {
+      position: absolute;
+      bottom: 0;
+    }
+    & .childDivElt {
+      width: 98px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      text-align: center;
+    }
+    &.timeline-bottom {
+      top: 10px;
+      margin-top: 10px;
+      margin-top: 0px;
+    }
+  }
+  & .connectLines {
+    height: 80px;
+    width: 103px;
+
+    & .line {
+      border-radius: 1.5px;
+      display: inline-block;
+      position: relative;
+    
+      &.lineRed {
+        background-color: var(--color-red);
+      }
+      &.lineGreen {
+        background-color: var(--color-green);
+      }
+      &.lineViolet {
+        background-color: var(--color-violet);
+      }
+      &.lineBlue {
+        background-color: var(--color-blue);
+      }
+    }
+    & .firstLine {
+      border-top-left-radius: 1.5px;
+      border-bottom-left-radius: 1.5px;
+      height: 3px;
+      width: var(--icon-unit);
+      &.timeline-bottom {
+        bottom: calc(var(--icon-unit) / 2 + 10px);
+      }
+    }
+    & .secondLine {
+      left: 0px;
+      background-color: inherit !important;
+      /* border: 3px solid var(--color-red); */
+      width: calc(var(--icon-unit) / 2 + 10px + 3px);
+      height: calc(var(--icon-unit) / 2 + 10px + 3px);
+      border-left-width: 3px;
+      border-left-style: solid;
+      border-top-width: 3px;
+      border-top-style: solid;
+      border-top-left-radius: calc(var(--icon-unit) + 10px + 10px);
+      &.lineRed {
+        border-color: var(--color-red);
+      }
+      &.lineGreen {
+        border-color: var(--color-green);
+      }
+      &.lineViolet {
+        border-color: var(--color-violet);
+      }
+      &.lineBlue {
+        border-color: var(--color-blue);
+      }
+      &.timeline-bottom {
+        width: calc(var(--icon-unit) / 2 + 10px + 3px);
+        height: calc(var(--icon-unit) / 2 + 10px + 3px);
+        border-top: 0px;
+        border-top-left-radius: 0px;
+        border-bottom-width: 3px;
+        border-bottom-style: solid;
+        border-bottom-left-radius: calc(var(--icon-unit) + 10px + 10px);
+      }
+    }
+    & .thirdLine {
+      left: 0px;
+      height: calc(var(--icon-unit) - 10px);
+      width: 3px;
+      bottom: calc(var(--icon-unit) / 2 + 10px);
+      &.timeline-bottom {
+        top: calc(var(--icon-unit) / 2 + 10px + 2px);
+        bottom: 0px;
+      }
+    }
+    & .fourthLine {
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      bottom: calc(var(--icon-unit) / 2 + 10px + var(--icon-unit) - 10px -1px);
+      left: -7px;
+      &.timeline-bottom {
+        bottom: 0px;
+        top: 46px;
+      }
+    }
+  }
+  & .imageDiv {
+    width: var(--icon-unit);
+    height: var(--icon-unit);
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: calc(var(--icon-unit) + 10px);
+    bottom: calc(var(--icon-unit) + 20px);
+    background-color: white;
+    cursor: pointer;
+    /* border: white 3px solid; */
+    position: relative;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    &.noPointer {
+      cursor: default;
+    }
+    &.timeline-bottom {
+      top: calc(var(--icon-unit) / 2 + 5px);
+    }
+  }
+  & .subText {
+    height: 40px;
+    width: var(--icon-unit);
+    font-weight: 700;
+    text-align: center;
+    color: chartreuse;
+    position: relative;
+    left: calc(var(--icon-unit) + 10px);
+    bottom: calc(var(--icon-unit));
+    &.timeline-bottom {
+      /* top: calc(var(--icon-unit) - 10px); */
+      top: 30px;
+    }
+  }
+}
+
+.supportCase {
+  background-image: url(../../../../assets/images/supportCaseOrange.svg);
+}
+.dispatch {
+  background-image: url(../../../../assets/images/supportCaseOrange.svg);
+  /* background-image: url(../../../../assets/images/dispatch.png); */
+}
+.hardware {
+  background-image: url(../../../../assets/images/hardwareChip.png);
+  /* background-image: url(../../../../assets/images/hardwareChip.png); */
+}
+.software {
+  background-image: url(../../../../assets/images/softwareBlue.png);
+  /* background-image: url(../../../../assets/images/softwareRound.png); */
+}
+
+.tooltipDiv {
+  & .toolDivElt {
+  }
+}
