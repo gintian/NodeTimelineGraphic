@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "reactjs-nodejs-application for showing timeline",
   "main": "index.js",
+  "engines":{
+    "node":"8.11.x"
+  },
   "scripts": {
     "preinstall": "npm i webpack -g && npm i webpack-cli && npm i jsdoc -g",
     "docs": "jsdoc -c ./jsdoc.conf.json",
